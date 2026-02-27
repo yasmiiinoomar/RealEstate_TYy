@@ -1,0 +1,485 @@
+/*
+   1-Common Styles
+   2-General Styles
+   3-Sections 
+     3.0 Header section
+     3.1 Home section 
+     3.2 About section
+     3.3 Sell section
+     3.4 Rent section
+     3.5 Buy section 
+     3.6 Contact section
+     3.7 Footer section
+*/
+
+
+/* 1- Common Styles
+   
+     -container
+     -opacity hover
+     -section header
+     -section padding
+     -hover effect 
+*/
+
+
+/* 2-General Css Styles*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.clear {
+    clear: both;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.pd-y {
+    padding: 120px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-header .section-title {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.section-header .line {
+    display: block;
+    height: 4px;
+    width: 40px;
+    margin: auto;
+    margin: 0px auto 70px auto;
+    background-color: rgb(148, 131, 33);
+}
+
+img {
+    border-radius: 50px;
+}
+
+
+/* 3- Section Styles */
+
+
+/*   3.0 Header section*/
+
+.header {
+    background: rgb(80, 72, 72);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.header-content {
+    overflow: hidden;
+}
+
+.header .Logo {
+    width: 20%;
+    float: left;
+    text-align: center;
+}
+
+.img-logo {
+    height: 70px;
+    box-sizing: border-box;
+}
+
+.header .nav {
+    width: 75%;
+    float: left;
+    list-style: none;
+    text-align: right;
+}
+
+.header .nav li {
+    display: inline-block;
+}
+
+.header .nav li a {
+    color: rgb(214, 214, 214);
+    display: block;
+    padding: 25px 15px;
+    font-size: 18px;
+}
+
+.header .nav li a.active:after,
+.header .nav li a:after {
+    content: "";
+    display: block;
+    height: 3px;
+    margin-top: 2px;
+    background-color: rgb(148, 131, 33);
+    transition: width 0.5s;
+}
+
+.header .nav li a:after {
+    width: 0%;
+}
+
+.header .nav li a.active:after {
+    width: 100%;
+}
+
+.header .nav li a:hover:after {
+    width: 100%;
+}
+
+.hover-opacity:hover {
+    opacity: 0.8;
+}
+
+.hover-opacity {
+    transition: opacity 0.5s;
+}
+
+
+/* Home Section */
+
+.home {
+    position: relative;
+    height: 100vh;
+    background-image: url(../image/1.jpg);
+    background-size: cover;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(92, 87, 87, 0.87);
+}
+
+.home .title {
+    color: rgb(245, 245, 245);
+    font-size: 4.5rem;
+}
+
+.home-content {
+    position: absolute;
+    width: 65%;
+    /* hero image */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 30px;
+}
+
+.home .home-desc {
+    margin: 20px 0;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+
+/* about section */
+
+.about {
+    background-color: #e9e3e3;
+}
+
+.about-item {
+    width: 50%;
+    float: left;
+}
+
+.about-item .section-header {
+    text-align: left;
+    margin: 30px 0 0 70px
+}
+
+.about-item .section-header .line {
+    margin: 0 0 30px 0;
+}
+
+.about-item-desc {
+    padding-right: 20px;
+    color: #999;
+    line-height: 1.4;
+    font-size: 20px;
+    margin: 25px 0 0px 70px
+}
+
+.btn-about {
+    margin-right: 10px;
+    background: #fff;
+}
+
+.btn {
+    min-width: 150px;
+    padding: 15px 0;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 25px 0 0px 65px;
+    background-color: rgb(172, 150, 26);
+}
+
+.btn a {
+    color: #d6cece;
+    display: block;
+}
+
+
+/* buy home section*/
+
+.buy-home {
+    background: #cec8c8;
+}
+
+.buy-home-content {
+    overflow: hidden;
+}
+
+.buy-home-item {
+    width: 30%;
+    float: left;
+    margin-bottom: 40px;
+    height: 450px;
+    background-color: rgba(177, 177, 166, 0.685);
+    box-shadow: 0 3px 6px rgb(0 0 0 / 15%);
+    border-radius: 25px;
+}
+
+.img-buy {
+    height: 300px;
+    width: 350px;
+    margin-left: 8px;
+    margin-top: 10px;
+}
+
+.buy-home-item.mg {
+    margin-left: 3.2%;
+    margin-right: 3.2%;
+}
+
+.buy-home-desc {
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: rgb(40, 41, 41);
+    text-align: center;
+}
+
+.buy-home-link {
+    color: #301244;
+    margin-top: 10px;
+    display: inline-block;
+    margin-left: 113px;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.buy-home-link:hover,
+.rent-home-link:hover {
+    background: rgb(172, 150, 26);
+}
+
+
+.con {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* rent home section*/
+
+.rent-home {
+    background-color: #e9e3e3;
+}
+
+.rent-home-content {
+    overflow: hidden;
+}
+
+.rent-home-item {
+    width: 30%;
+    float: left;
+    margin-bottom: 40px;
+    height: 450px;
+    background-color: rgba(177, 177, 166, 0.685);
+    box-shadow: 0 3px 6px rgb(0 0 0 / 15%);
+    border-radius: 25px;
+}
+
+.img-rent {
+    height: 300px;
+    width: 350px;
+    margin-left: 8px;
+    margin-top: 10px;
+}
+
+.rent-home-item.mg {
+    margin-left: 3.2%;
+    margin-right: 3.2%;
+}
+
+.rent-home-desc {
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: rgb(40, 41, 41);
+    text-align: center;
+}
+
+.rent-home-link {
+    color: #301244;
+    margin-top: 10px;
+    display: inline-block;
+    margin-left: 135px;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+
+/* feedback section */
+
+.feedback {
+    position: relative;
+    background-color: #cec8c8;
+}
+
+.feedback-content {
+    overflow: hidden;
+    padding: 0 16px;
+    width: 100%;
+    margin: auto;
+}
+
+.feedback-item {
+    width: 30%;
+    float: left;
+    margin: 17px;
+}
+
+.feedback-top {
+    padding: 10px 2px 40px 100px;
+    position: relative;
+}
+
+.feedback-item .feedback-top img {
+    position: absolute;
+    left: 10px;
+    top: 7px;
+    border-radius: 100px;
+    height: 75px;
+}
+
+.feedback-item .feedback-top h3 {
+    margin: 5px 0;
+}
+
+.feedback-top span {
+    color: rgb(139, 124, 34);
+}
+
+.feedback-desc {
+    line-height: 1.5;
+    font-size: 17px;
+}
+
+
+/* footer section */
+
+.footer {
+    background: rgb(80, 72, 72);
+    text-align: center;
+    padding: 5px;
+}
+
+.tabs {
+    position: relative;
+    left: 50%;
+    display: flex;
+    transform: translate(-50%);
+    justify-content: center;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container_tab {
+    width: 56px;
+    height: 56px;
+    overflow: hidden;
+    background-color: rgb(148, 131, 33);
+    margin-right: 25px;
+    border-radius: 60px;
+    transition: width 0.5s;
+    font-size: 25px;
+}
+
+i {
+    line-height: 60px!important;
+    font-size: 20px;
+    width: 45px;
+    color: #fff;
+    text-align: center;
+}
+
+.container_tab span {
+    color: #fff;
+    font-size: 25px;
+    margin: 0 -9px;
+    font-family: 'Roboto-Regular';
+    display: none;
+}
+
+.container_tab:hover {
+    width: 190px;
+    cursor: pointer;
+    animation: none;
+}
+
+.container_tab:hover span {
+    display: inline-block;
+}
+
+.facebook {
+    margin: 0 -15px!important;
+}
+
+.footer-links li a i {
+    line-height: 50px;
+    font-size: 25px;
+}
+
+.footer .copyright {
+    color: rgb(129, 123, 123);
+    margin-bottom: 10px;
+    font-size: 15px;
+}

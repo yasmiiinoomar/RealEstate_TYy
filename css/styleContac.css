@@ -1,0 +1,267 @@
+                            /* 2-General Css Styles*/
+                            
+                            * {
+                                margin: 0;
+                                padding: 0;
+                                box-sizing: border-box;
+                            }
+                            
+                            .container {
+                                width: 80%;
+                                margin: auto;
+                            }
+                            
+                            body {
+                                font-family: 'Roboto', sans-serif;
+                            }
+                            
+                            .clear {
+                                clear: both;
+                            }
+                            
+                            h1,
+                            h2,
+                            h3,
+                            h4,
+                            h5,
+                            h6 {
+                                font-family: sans-serif;
+                            }
+                            
+                            a {
+                                text-decoration: none;
+                            }
+                            
+                            .pd-y {
+                                padding: 120px 0;
+                            }
+                            
+                            .overlay {
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                top: 0;
+                                left: 0;
+                                background-color: rgba(0, 0, 0, 0.5);
+                            }
+                            
+                            .section-header {
+                                text-align: center;
+                                margin-bottom: 20px;
+                            }
+                            
+                            .section-header .section-title {
+                                font-size: 30px;
+                                margin-bottom: 8px;
+                            }
+                            
+                            .section-header .line {
+                                display: block;
+                                height: 4px;
+                                width: 40px;
+                                margin: auto;
+                                margin: 0px auto 70px auto;
+                                background-color: rgb(148, 131, 33);
+                            }
+                            /* 3- Section Styles */
+                            /*   3.0 Header section*/
+                            
+                            .header {
+                                background: rgb(80, 72, 72);
+                                width: 100%;
+                                z-index: 10;
+                                position: fixed;
+                            }
+                            
+                            .header-content {
+                                overflow: hidden;
+                            }
+                            
+                            .header .Logo {
+                                width: 20%;
+                                float: left;
+                                text-align: center;
+                            }
+                            
+                            .img-logo {
+                                height: 70px;
+                                box-sizing: border-box;
+                            }
+                            
+                            .header .nav {
+                                width: 75%;
+                                float: left;
+                                list-style: none;
+                                text-align: right;
+                            }
+                            
+                            .header .nav li {
+                                display: inline-block;
+                            }
+                            
+                            .header .nav li a {
+                                color: rgb(214, 214, 214);
+                                display: block;
+                                padding: 25px 15px;
+                                font-size: 18px;
+                            }
+                            
+                            .header .nav li a.activeC:after,
+                            .header .nav li a:after {
+                                content: "";
+                                display: block;
+                                height: 3px;
+                                margin-top: 2px;
+                                background-color: rgb(148, 131, 33);
+                                transition: width 0.5s;
+                            }
+                            
+                            .header .nav li a:after {
+                                width: 0%;
+                            }
+                            
+                            .header .nav li a.activeC:after {
+                                width: 100%;
+                            }
+                            
+                            .header .nav li a:hover:after {
+                                width: 100%;
+                            }
+                            /*Contact section */
+                            
+                            .Contact-us {
+                                background-image: url(../image/contact/contact-us-background.jpg);
+                                background-size: cover;
+                                height: 100vh;
+                                position: relative;
+                            }
+                            
+                            .content {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+                            
+                            .Contact-us .contain {
+                                background: #0000;
+                                width: 800px;
+                                max-width: 800px;
+                                padding: 25px 40px 10px 40px;
+                                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                            }
+                            
+                            .contain form {
+                                padding: 30px 0 0 0;
+                            }
+                            
+                            form .input {
+                                width: 300px;
+                                height: 50px;
+                                margin: 10px 20px;
+                                position: relative;   
+                            }
+                            
+                            .input input,
+                            .textarea textarea {
+                                display: block;
+                                height: 100%;
+                                width: 100%;
+                                border: none;
+                                font-size: 17px;
+                                border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+                                margin: 10px;
+                                padding: 10px;
+                                border-radius: 120px;
+                            }
+                            
+                            .textarea textarea {
+                                width: 100%;
+                            }
+                            
+                            .input input[type="submit"] {
+                                width: 300px;
+                                height: 50px;
+                                font-weight: 600;
+                                background-color: rgb(148, 131, 33);
+                                color: #fff;
+                            }
+                            
+                            .input input[type="submit"]:hover {
+                                background-color: rgba(134, 120, 41, 0.9);
+                                color: #fff;
+                            }
+                            
+                            select {
+                                width: 125px;
+                                height: 47px;
+                                margin: 0 9px;
+                            }
+                            /* footer section */
+                            
+                            .footer {
+                                background: rgb(80, 72, 72);
+                                text-align: center;
+                                padding: 5px;
+                            }
+                            
+                            .tabs {
+                                position: relative;
+                                left: 50%;
+                                display: flex;
+                                transform: translate(-50%);
+                                justify-content: center;
+                                padding-top: 20px;
+                                margin-bottom: 20px;
+                            }
+                            
+                            .container_tab {
+                                width: 56px;
+                                height: 56px;
+                                overflow: hidden;
+                                background-color: rgb(148, 131, 33);
+                                margin-right: 25px;
+                                border-radius: 60px;
+                                transition: width 0.5s;
+                                font-size: 25px;
+                            }
+                            
+                            i {
+                                line-height: 60px!important;
+                                font-size: 20px;
+                                width: 45px;
+                                color: #fff;
+                                text-align: center;
+                            }
+                            
+                            .container_tab span {
+                                color: #fff;
+                                font-size: 25px;
+                                margin: 0 -9px;
+                                font-family: 'Roboto-Regular';
+                                display: none;
+                            }
+                            
+                            .container_tab:hover {
+                                width: 190px;
+                                cursor: pointer;
+                            }
+                            
+                            .container_tab:hover span {
+                                display: inline-block;
+                            }
+                            
+                            .facebook {
+                                margin: 0 -15px!important;
+                            }
+                            
+                            .footer-links li a i {
+                                line-height: 50px;
+                                font-size: 25px;
+                            }
+                            
+                            .footer .copyright {
+                                color: rgb(129, 123, 123);
+                                margin-bottom: 10px;
+                                font-size: 15px;
+                            }

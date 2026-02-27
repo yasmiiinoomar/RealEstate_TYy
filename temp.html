@@ -1,0 +1,598 @@
+<!doctype html>
+<html>
+<!-- InstanceBegin template="/Templates/template.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+    <meta charset="utf-8">
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <title>Rent Home</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- InstanceEndEditable -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+
+        .con {
+            display: flex;
+            justify-content: center;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .pd-y {
+            padding: 120px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section-header .section-title {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .section-header .line {
+            display: block;
+            height: 4px;
+            width: 40px;
+            margin: auto;
+            margin: 0px auto 70px auto;
+            background-color: rgb(148, 131, 33);
+        }
+
+        img {
+            border-radius: 50px;
+        }
+
+        /* 3- Section Styles */
+        /*   3.0 Header section*/
+
+        .header {
+            background: rgb(80, 72, 72);
+            /* position: fixed; */
+            width: 100%;
+            z-index: 10;
+        }
+
+        .header-content {
+            overflow: hidden;
+        }
+
+        .header .Logo {
+            width: 100%;
+            float: left;
+            text-align: center;
+        }
+
+        .img-logo {
+            height: 90px;
+            box-sizing: border-box;
+        }
+
+        .header .nav {
+            width: 75%;
+            float: left;
+            list-style: none;
+            text-align: right;
+        }
+
+        .nav li {
+            display: inline-block;
+        }
+
+        .header .nav li a {
+            color: rgb(214, 214, 214);
+            display: block;
+            padding: 25px 15px;
+            font-size: 18px;
+        }
+
+        .nav li a {
+            color: rgb(26, 24, 24);
+            display: block;
+            padding: 25px 15px;
+            font-size: 18px;
+        }
+
+        .header .nav li a.active:after,
+        .header .nav li a:after {
+            content: "";
+            display: block;
+            height: 3px;
+            margin-top: 2px;
+            background-color: rgb(148, 131, 33);
+            transition: width 0.5s;
+        }
+
+        .header .nav li a:after {
+            width: 0%;
+        }
+
+        .header .nav li a.active:after {
+            width: 100%;
+        }
+
+        .header .nav li a:hover:after {
+            width: 100%;
+        }
+
+        .hover-opacity:hover {
+            opacity: 0.8;
+        }
+
+        .hover-opacity {
+            transition: opacity 0.5s;
+        }
+
+        /* section */
+        .photo {
+            background-color: #e9e3e3;
+        }
+
+        .rent-home-content {
+            overflow: hidden;
+        }
+
+        .rent-home-item {
+            width: 30%;
+            float: left;
+            margin-bottom: 110px;
+            height: 200px;
+            border-radius: 25px;
+        }
+
+        .img-rent {
+            height: 300px;
+            width: 350px;
+            margin-left: 8px;
+            margin-top: 10px;
+        }
+
+        .rent-home-item.mg {
+            margin-left: 3.2%;
+            margin-right: 3.2%;
+        }
+
+        .more-item {
+            width: 50%;
+            float: left;
+        }
+
+        .more-item .section-header {
+            text-align: left;
+            margin: 30px 0 0 70px;
+        }
+
+        .more-item .section-header .line {
+            margin: 0 0 30px 0;
+        }
+
+        .more-item-desc {
+            padding-right: 20px;
+            color: #999;
+            line-height: 1.4;
+            font-size: 20px;
+            margin: 25px 0 0px 70px
+        }
+
+        .btn-more {
+            margin-right: 10px;
+            background: #fff;
+        }
+
+        .btn {
+            min-width: 150px;
+            padding: 15px 0;
+            border-radius: 10px;
+            border: 0;
+            cursor: pointer;
+            font-size: 18px;
+            margin: 25px 0 0px 65px;
+            background-color: rgb(172, 150, 26);
+        }
+
+        .btn a {
+            color: #d6cece;
+            display: block;
+        }
+
+        /* footer section */
+
+        .footer {
+            background: rgb(80, 72, 72);
+            text-align: center;
+            padding: 5px;
+        }
+
+        .tabs {
+            position: relative;
+            left: 50%;
+            display: flex;
+            transform: translate(-50%);
+            justify-content: center;
+            padding-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .container_tab {
+            width: 56px;
+            height: 56px;
+            overflow: hidden;
+            background-color: rgb(148, 131, 33);
+            margin-right: 25px;
+            border-radius: 60px;
+            transition: width 0.5s;
+            font-size: 25px;
+        }
+
+        i {
+            line-height: 60px !important;
+            font-size: 20px;
+            width: 45px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .container_tab span {
+            color: #fff;
+            font-size: 25px;
+            margin: 0 -9px;
+            font-family: 'Roboto-Regular';
+            display: none;
+        }
+
+        .container_tab:hover {
+            width: 190px;
+            cursor: pointer;
+            animation: none;
+        }
+
+        .container_tab:hover span {
+            display: inline-block;
+        }
+
+        .facebook {
+            margin: 0 -15px !important;
+        }
+
+        .footer-links li a i {
+            line-height: 50px;
+            font-size: 25px;
+        }
+
+        .footer .copyright {
+            color: rgb(129, 123, 123);
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+
+        /* footer section end */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 60%;
+            padding: 16px;
+            margin-top: 10px;
+            color: white;
+            font-weight: bold;
+            font-size: 30px;
+            transition: 0.6s ease;
+            border-radius: 10px;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 120px;
+
+        }
+        .prev{
+            left: 800px;
+        }
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(99, 70, 70, 0.8);
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+
+            .prev,
+            .next,
+            .text {
+                font-size: 11px
+            }
+        }
+    </style>
+    <!-- InstanceBeginEditable name="head" -->
+    <!-- InstanceEndEditable -->
+</head>
+
+<body>
+
+    <table>
+        <tbody>
+            <tr>
+                <div class="header" style=" position: fixed;">
+                    <div class="container">
+                        <div class="Logo">
+                            <!-- عشان م حد ياخد الصورة -->
+                            <pre><img class="img-logo" src="image/logf.png"  alt="logo" draggable="false" > <img class="img-logo" src="image/12.png"alt="logo" draggable="false"></pre>
+                        </div>
+
+                        <!-- عشان الاب يحس باولاده  -->
+                        <div class="clear"></div>
+                    </div>
+                    <!-- container div  -->
+
+                </div>
+                <!-- Header div  -->
+            </tr>
+            <tr>
+                <ul class="nav"
+                    style="background: #e9e3e3; text-align: center; position: fixed; width:100%; top: 80px;height: 70px; line-height: 35px;">
+                    <li style="margin-right: 50px;"><a href="#more">Information</a></li>
+                    <!-- <li style="margin-left: 60px;"><a href="#video">videos</a></li> -->
+                </ul>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- 2-2 home Section -->
+    <div class="more " id="more" style="padding: 210px 0;background-color: #e9e3e3;">
+        <div class="container">
+            <div class="more-item">
+                <div class="section-header">
+                    <h2 class="section-title">More Information About it</h2>
+                    <span class="line"></span>
+                </div>
+                <!-- ./section header -->
+                <p class="more-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, minima
+                    velit sequi suscipit earum blanditiis sint eos fugiat quos debitis esse fugit. Quibusdam veritatis,
+                    dolore omnis illo, blanditiis ratione consequuntur sed necessitatibus,
+                    voluptatum eaque nulla vitae dolorum ab officiis ducimus repudiandae tenetur sit rerum quisquam odio
+                    error culpa? Accusantium deleniti aperiam molestiae hic, ipsa consequuntur sapiente minima
+                    praesentium laboriosam deserunt?</p>
+                <button class="btn btn-more hover-opacity"><a href="contact.html">Contact us !</a></button>
+            </div>
+            <!-- ./more item -->
+            <div class="more-item">
+                <div class="more-item-img">
+                    <div class="slideshow-container">
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">1 / 6</div>
+                            <img src="image/buyHome/buyhome1/1.jpg" style="width: 600px;;   height: 450px;
+                            box-sizing: border-box;margin-left: 40px;">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">2 / 6</div>
+                            <img src="image/buyHome/buyhome1/2.jpg" style="width: 600px;;   height: 450px;
+                            box-sizing: border-box;margin-left: 40px;">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">3 / 6</div>
+                            <img src="image/buyHome/buyhome1/3.jpg" style="width: 600px;;   height: 450px;
+                            box-sizing: border-box;margin-left: 40px;">
+                        </div>
+                        <div class="mySlides fade">
+                            <div class="numbertext">4 / 6</div>
+                            <img src="image/buyHome/buyhome1/4.jpg" style="width: 600px;;   height: 450px;
+                              box-sizing: border-box;margin-left: 40px;">
+                        </div>
+                        <div class="mySlides fade">
+                            <div class="numbertext">5 / 6</div>
+                            <img src="image/buyHome/buyhome1/5.jpg" style="width: 600px;;   height: 450px;
+                              box-sizing: border-box;margin-left: 40px;">
+                        </div>
+                        <div class="mySlides fade">
+                            <div class="numbertext">6 / 6</div>
+                            <img src="image/buyHome/buyhome1/6.jfif" style="width: 600px;;   height: 450px;
+                              box-sizing: border-box; margin-left: 40px;">
+                        </div>
+
+                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                        <a class="next" onclick="plusSlides(1)">❯</a>
+
+                    </div>
+                    <br>
+
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                        <span class="dot" onclick="currentSlide(6)"></span>
+                    </div>
+                </div>
+
+            </div>
+            <!-- ./more item -->
+            <div class="clear"></div>
+        </div>
+        <!-- ./container -->
+    </div>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+        var slides, dots;
+
+        function showSlides() {
+            var i;
+            slides = document.getElementsByClassName("mySlides");
+            dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 3000); // Change image every 8 seconds
+        }
+
+        function plusSlides(position) {
+            slideIndex += position;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            else if (slideIndex < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        function currentSlide(index) {
+            if (index > slides.length) { index = 1 }
+            else if (index < 1) { index = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[index - 1].style.display = "block";
+            dots[index - 1].className += " active";
+        }
+
+    </script>
+
+
+    <footer class="footer">
+        <div class="Logo">
+
+            <pre><img class="img-logo" src="image/logf.png"  alt="logo" draggable="false" > <img class="img-logo" src="image/12.png"alt="logo" draggable="false"></pre>
+        </div>
+       <div class="tabs">
+
+            <div class="container_tab ">
+                <a href="https://www.facebook.com/yasmen.omar.142240?mibextid=ZbWKwL">
+                    <i class="fa fa-facebook hover-opacity"></i>
+                    <span class="facebook ">Add Friend</span>
+                </a>
+            </div>
+            <!-- Facebook -->
+
+
+            <div class="container_tab ">
+                <a href="https://www.instagram.com/yasmiiiinnneee?igsh=MW1pOWIwaXRncmQwYw==">
+                    <i class="fa fa-instagram hover-opacity"></i>
+                    <span>Follow Me</span>
+                </a>
+            </div>
+            <!-- Instagram -->
+
+            <div class="container_tab ">
+                <a href="https://youtube.com/@yasmino1730?si=VSySwXd11Rl-OfN5">
+                    <i class="fa fa-youtube hover-opacity"></i>
+                    <span>Subscribe</span>
+                </a>
+            </div>
+            <!-- Youtube -->
+
+        </div>
+        <!-- tabs -->
+        <p class="copyright">Copyright &copy; 2026. All Reserved By <span style="color: rgb(148, 131, 33);">Yasmin Omar _ 
+            Tala Ehab</span></p>
+    </footer>
+
+    <!-- footer -->
+</body>
+
+</html>
